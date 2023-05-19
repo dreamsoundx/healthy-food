@@ -3,6 +3,7 @@
 &display=swap
 &subset=cyrillic-ext 
 */
+@import url("https://fonts.googleapis.com/css?family=Roboto:700&display=swap");
 /* ОБНУЛЕНИЕ СТИЛЕЙ */
 *,
 *::before,
@@ -46,14 +47,32 @@ body {
   height: 100%;
 }
 
-html {
-  font-size: 14px;
+@font-face {
+  font-family: "HelveticaNeue-55Roman";
+  src: url("../fonts/HelveticaNeue-55Roman.woff2") format("woff2"), url("../fonts/HelveticaNeue-55Roman.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-
+@font-face {
+  font-family: "HelveticaNeue-CondensedBlack";
+  src: url("../fonts/HelveticaNeue-CondensedBlack.woff2") format("woff2"), url("../fonts/HelveticaNeue-CondensedBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeue-CondensedBold";
+  src: url("../fonts/HelveticaNeue-CondensedBold.woff2") format("woff2"), url("../fonts/HelveticaNeue-CondensedBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   line-height: 1;
-  color: rgb(94, 106, 112);
-  background: #e8e8e8;
+  font-family: "HelveticaNeue-55Roman", sans-serif;
+  color: rgb(133, 135, 140);
+  background: #1a1a1a;
 }
 
 .wrapper {
@@ -63,6 +82,6 @@ body {
 
 [class*=__container] {
   margin: 0px auto;
-  max-width: 871px;
+  max-width: 1140px;
   padding: 0px 15px;
 }
