@@ -2,8 +2,26 @@
 &display=swap
 &subset=cyrillic-ext 
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
 @import '_null';
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue-Regular.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'HelveticaNeue-55Roman';
@@ -50,56 +68,128 @@ body {
   padding: 0px 15px;
 }
 
-.your-favorite {
-  // .your-favorite__content
+.your-favorite-food {
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.0001) 0%, #1a1a1a 100%),
+    linear-gradient(0deg, rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5));
+
+  // .your-favorite-food__content
 
   &__content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 171px 0px 0px 0px;
+    background: url('../assets/your-favorite-food/img/image.png') 50% 0
+      no-repeat;
+    border-radius: 8px;
+  }
+  // .your-favorite-food__container
+
+  &__container {
+    display: flex;
+    max-width: 945px;
+    flex-direction: column;
+    padding-bottom: 27.84%;
   }
 
-  // .your-favorite__title
+  // .your-favorite-food__title
 
   &__title {
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 119%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
   }
 
-  // .your-favorite__text
+  // .your-favorite-food__selected-title
+
+  &__selected-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 72px;
+  }
+
+  // .your-favorite-food__text
 
   &__text {
+    align-self: center;
+    font-family: 'HelveticaNeue-55Roman', sans-serif;
+    line-height: 162%;
+    text-align: center;
+    letter-spacing: -0.2px;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    max-width: 595px;
+    // margin: 0 auto;
+    padding: 0px 15px 0px 15px;
+    &:not(:last-child) {
+      margin-bottom: 42px;
+    }
   }
 
-  // .your-favorite__button
+  // .your-favorite-food__selected-text
+
+  &__selected-text {
+    text-transform: uppercase;
+  }
+
+  // .your-favorite-food__button
 
   &__button {
+    align-self: center;
+    font-family: 'HelveticaNeue-CondensedBold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 122%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #1a1a1a;
+    padding: 25px 57px 25px 57px;
+    background: #34c759;
+    border-radius: 43px;
+    &:not(:last-child) {
+      margin-bottom: 74px;
+    }
   }
+  .your-favorite-food {
+    // .your-favorite-food__contacts
 
-  // .your-favorite__contacts
-
-  &__contacts {
+    &__contacts {
+    }
   }
-}
-.title-favorite-your {
-  // .title-favorite-your__selected
-
-  &__selected {
-  }
-}
-.text-favorite-your {
-  // .text-favorite-your__selected
-
-  &__selected {
-  }
-}
-.button {
 }
 .contacts {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 45px;
+  margin: 0px -45px;
   // .contacts__item
 
   &__item {
+    flex: 1 1 33.333%;
+    padding: 0px 45px;
+    min-width: 200px;
   }
 }
 .item-contacts {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  text-align: center;
   // .item-contacts__icon
 
   &__icon {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
   }
 
   // .item-contacts__image
@@ -110,10 +200,20 @@ body {
   // .item-contacts__info
 
   &__info {
+    line-height: 188%;
+    color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
   }
 
   // .item-contacts__title
 
   &__title {
+    font-size: 14px;
+    line-height: 160%;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
   }
 }
