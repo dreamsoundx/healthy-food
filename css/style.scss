@@ -68,10 +68,48 @@ body {
   padding: 0px 15px;
 }
 
-.your-favorite-food {
-  background: linear-gradient(180deg, rgba(26, 26, 26, 0.0001) 0%, #1a1a1a 100%),
-    linear-gradient(0deg, rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5));
+.common-titles {
+  position: relative;
+  padding: 62px 0px 59px 0px;
 
+  // .common-titles__title
+
+  &__title {
+    position: relative;
+    font-size: 36px;
+    line-height: 250%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+    color: #d9d9d9;
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #34c759;
+      margin: 32px auto 0px;
+    }
+  }
+
+  // .common-titles__subtitle
+
+  &__subtitle {
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: 'HelveticaNeue-CondensedBlack', sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #303030;
+  }
+}
+
+.your-favorite-food {
   // .your-favorite-food__content
 
   &__content {
@@ -170,6 +208,7 @@ body {
   flex-wrap: wrap;
   row-gap: 45px;
   margin: 0px -45px;
+
   // .contacts__item
 
   &__item {
@@ -215,5 +254,76 @@ body {
     color: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.5;
+  }
+}
+
+.work {
+  // .work__container
+
+  &__container {
+  }
+
+  // .work__titles
+
+  &__titles {
+  }
+
+  // .work__list
+
+  &__list {
+    display: flex;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+  }
+
+  // .work__item
+
+  &__item {
+    flex: 1 1 25%;
+    padding: 0px 15px;
+    transition: all 0.5s ease 0s;
+    @media (max-width: 1024px) {
+      flex: 1 0 50%;
+    }
+  }
+}
+
+.item-work {
+  height: 100%;
+  padding: 25px 26px 24px 26px;
+  min-height: 206px;
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+
+  // .item-work__title
+
+  &__title {
+    font-size: 22px;
+    line-height: 118%;
+    letter-spacing: -0.275px;
+    text-transform: capitalize;
+    color: #ffffff;
+    &::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 2px;
+      background: #34c759;
+      margin: 15px 0px 0px 0px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .item-work__text
+
+  &__text {
+    font-size: 13px;
+    line-height: 138%;
+    letter-spacing: -0.1625px;
+    color: rgba(255, 255, 255, 0.5);
   }
 }
